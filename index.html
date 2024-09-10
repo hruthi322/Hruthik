@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | FAQ accordion challenge</title>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="wrapper">
+      <div class="background-image-container">
+      </div>
+      <div class="accordion-wrapper">
+        <div class="heading-container">
+          <img src="./assets/images/icon-star.svg" role="presentation">
+          <h1>FAQs</h1>
+          <button class="toggle" type="button" aria-pressed="false">
+            Multiselect
+            <div class="toggle__icon">
+  
+            </div>
+          </button>
+        </div>
+        <div class="accordion-container">
+          <ul id="accordionGroup" class="accordion">
+            <li>
+              <h2> <button type="button" aria-expanded="false" class="accordion-trigger" aria-controls="sect1"
+                  id="accordion1id">
+                  <span class="accordion-title">
+                    Personal Information</span><span class="accordion-icon"></span>
+                </button>
+              </h2>
+              <div id="sect1" role="region" aria-labelledby="accordion1id" class="accordion-panel" hidden>Frontend Mentor offers
+                realistic coding challenges to help developers improve their coding skills with projects in HTML, CSS, and
+                JavaScript. It's suitable for all levels and ideal for portfolio building.</div>
+            </li>
+            <li>
+              <h2> <button type="button" aria-expanded="false" class="accordion-trigger" aria-controls="sect2"
+                  id="accordion2id">
+                  <span class="accordion-title">
+                    Personal Information 
+                  </span>
+                  <span class="accordion-icon"></span>
+                </button>
+              </h2>
+              <div id="sect2" role="region" aria-labelledby="accordion2id" class="accordion-panel" hidden>Frontend Mentor offers
+                realistic coding challenges to help developers improve their coding skills with projects in HTML, CSS, and
+                JavaScript. It's suitable for all levels and ideal for portfolio building.</div>
+            </li>
+            <li>
+              <h2> <button type="button" aria-expanded="false" class="accordion-trigger" aria-controls="sect3"
+                  id="accordion3id">
+                  <span class="accordion-title">
+                    Personal Information
+                  </span>
+                  <span class="accordion-icon"></span>
+                </button>
+              </h2>
+              <div id="sect3" role="region" aria-labelledby="accordion3id" class="accordion-panel" hidden>Frontend Mentor offers
+                realistic coding challenges to help developers improve their coding skills with projects in HTML, CSS, and
+                JavaScript. It's suitable for all levels and ideal for portfolio building.</div>
+            </li>
+            <li>
+              <h2> <button type="button" aria-expanded="false" class="accordion-trigger" aria-controls="sect4"
+                  id="accordion4id">
+                  <span class="accordion-title">
+                    Personal Information
+                  </span>
+                  <span class="accordion-icon"></span>
+                </button>
+              </h2>
+              <div id="sect4" role="region" aria-labelledby="accordion4id" class="accordion-panel" hidden>Frontend Mentor offers
+                realistic coding challenges to help developers improve their coding skills with projects in HTML, CSS, and
+                JavaScript. It's suitable for all levels and ideal for portfolio building.</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

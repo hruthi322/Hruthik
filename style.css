@@ -1,0 +1,208 @@
+:root {
+  --clr-White: hsl(0, 0%, 100%);
+  --clr-Light-pink: hsl(275, 100%, 97%);
+  --clr-Grayish-purple: hsl(292, 16%, 49%);
+  --clr-Dark-purple: hsl(292, 42%, 14%);
+  --clr-accordion-text: #B0A6B1;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/static/WorkSans-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url(/assets/fonts/static/WorkSans-SemiBold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(/assets/fonts/static/WorkSans-Bold.ttf) format("truetype");
+}
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  min-height: 100vh;
+  background-color: var(--clr-Light-pink);
+}
+
+ul li {
+  list-style-type: none;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.background-image-container {
+  background: url("./assets/images/background-pattern-mobile.svg") no-repeat;
+  background-size: cover;
+  height: 30vh;
+  width: 100vw;
+}
+
+.accordion-wrapper {
+  position: absolute;
+  top: 66%;
+  width: 86%;
+  min-height: 300px;
+  background-color: var(--clr-White);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.accordion-panel {
+  color: var(--clr-accordion-text);
+  padding-block-start: 0.5rem;
+}
+.accordion-panel {
+  font-size: 16px;
+}
+@media screen and (min-width: 320px) {
+  .accordion-panel {
+    font-size: calc(16px + 4 * (100vw - 320px) / 1264);
+  }
+}
+@media screen and (min-width: 1584px) {
+  .accordion-panel {
+    font-size: 20px;
+  }
+}
+
+.accordion-title {
+  color: var(--clr-Dark-purple);
+}
+.accordion-title {
+  font-size: 18px;
+}
+@media screen and (min-width: 320px) {
+  .accordion-title {
+    font-size: calc(18px + 4 * (100vw - 320px) / 1264);
+  }
+}
+@media screen and (min-width: 1584px) {
+  .accordion-title {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .accordion-wrapper {
+    max-width: 600px;
+  }
+  .background-image-container {
+    background: url("./assets/images/background-pattern-desktop.svg") no-repeat;
+    background-size: cover;
+    height: 320px;
+    width: 100vw;
+  }
+}
+.heading-container {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+.heading-container h1 {
+  color: var(--clr-Dark-purple);
+}
+.heading-container img {
+  width: 24px;
+}
+
+.accordion-container .accordion li {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--clr-Light-pink);
+}
+.accordion-container .accordion li:last-child {
+  border-bottom: 0;
+}
+.accordion-container .accordion button {
+  background-color: unset;
+  border: none;
+  font-family: inherit;
+  font-weight: inherit;
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-block-start: 1rem;
+  padding-block-end: 0.5rem;
+  transition: all 1s;
+}
+.accordion-container .accordion button .accordion-icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 31px;
+}
+.accordion-container .accordion button:hover {
+  cursor: pointer;
+}
+.accordion-container .accordion button[aria-expanded=false] .accordion-icon {
+  background-image: url("./assets/images/icon-plus.svg");
+}
+.accordion-container .accordion button[aria-expanded=true] .accordion-icon {
+  background-image: url("./assets/images/icon-minus.svg");
+}
+
+.toggle {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  background-color: transparent;
+  border: none;
+  transition: 0.25s;
+  font-family: "Work Sans", sans-serif;
+  color: var(--clr-Dark-purple);
+  font-size: 1rem;
+  font-weight: 600;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto;
+}
+.toggle__icon {
+  position: relative;
+  border-radius: 100vw;
+  background-color: #AD28EB;
+  width: 48px;
+  height: 24px;
+  transition: inherit;
+}
+.toggle__icon::before {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  top: 50%;
+  background-color: var(--clr-White);
+  transform: translate(0, -50%);
+  transition: inherit;
+}
+.toggle:hover {
+  cursor: pointer;
+}
+.toggle[aria-pressed=true] .toggle__icon::before {
+  left: unset;
+  right: 1rem;
+  transform: translate(100%, -50%);
+}
+.toggle[aria-pressed=true] .toggle__icon {
+  background-color: var(--clr-Dark-purple);
+}/*# sourceMappingURL=style.css.map */
